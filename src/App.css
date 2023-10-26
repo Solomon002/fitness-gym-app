@@ -1,6 +1,6 @@
 body{
   font-family: 'Josefin Sans';
-  background-color: #FFFAFB;
+  background-color: white;
 }
   
 *{
@@ -83,68 +83,64 @@ body{
   transition: 0.3s all ease-in-out;
 }
   
-  .exercise-card img {
-    height: 326px;
+.exercise-card img {
+  height: 326px;
+}
+
+.bodyPart-card {
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+  margin: auto;
+}
+
+.exercise-card:hover,
+.bodyPart-card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.search-btn:hover {
+  color: #dfcf29 !important;
+  border: 1px solid #dfcf29 !important;
+  transition: .4s;
+}
+
+.exercise-video {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 387px;
+  height: 381px;
+  text-decoration: none;
+}
+
+@media screen and (max-width:1200px) {
+  .detail-image {
+    width: 300px;
+    height: 300px;
   }
-  
-  .bodyPart-card {
-    transform: scale(1, 1);
-    transition: 0.3s all ease-in-out;
-    margin: auto;
+
+
+  .react-horizontal-scrolling-menu--scroll-container {
+    width: 500px;
   }
-  
-  .exercise-card:hover,
-  .bodyPart-card:hover {
-    transform: scale(1.1, 1.1);
+
+  .hero-banner-img {
+    display: none;
   }
-  
-  .search-btn:hover {
-    color: #dfcf29 !important;
-    border: 1px solid #dfcf29 !important;
+
+  .exercise-card {
+    width: 250px;
   }
-  
+
   .exercise-video {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 387px;
-    height: 381px;
-    text-decoration: none;
+    width: 250px;
+    height: 300px;
   }
-  
-  @media screen and (max-width:1200px) {
-    .detail-image {
-      width: 300px;
-      height: 300px;
-    }
-  
-  
-    .react-horizontal-scrolling-menu--scroll-container {
-      width: 500px;
-    }
-  
-    /* .left-arrow,
-    .right-arrow {
-      position: static !important;
-    } */
-  
-    .hero-banner-img {
-      display: none;
-    }
-  
-    .exercise-card {
-      width: 250px;
-    }
-  
-    .exercise-video {
-      width: 250px;
-      height: 300px;
-    }
-  
+
+}
+
+@media screen and (max-width:400px) {
+  .exercise-card {
+    width: 250px;
   }
-  
-  @media screen and (max-width:400px) {
-    .exercise-card {
-      width: 250px;
-    }
-  }
+}

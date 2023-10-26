@@ -33,10 +33,12 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       fetchExercisesData();
     }, [bodyPart, setExercises]);
 
+    const exercisesArray = Array.isArray(exercises) ? exercises : [];
+
   // Pagination
   const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
-  const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
+  const currentExercises = exercisesArray.slice(indexOfFirstExercise, indexOfLastExercise);
 
   const paginate = (e, value) => {
     setCurrentPage(value);
